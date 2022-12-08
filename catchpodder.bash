@@ -84,7 +84,6 @@ function init {
     fi
     mkdir -p $metadir
     echo "$url" > $metadir/url
-    touch $podcastlog
     touch $feed
 }
 
@@ -104,6 +103,7 @@ function download {
         rm -f $logfile
     fi
     touch $logfile
+    touch $podcastlog
 
 
     # Read the feed
